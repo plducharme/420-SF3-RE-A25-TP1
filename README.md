@@ -121,9 +121,9 @@ Voici le pseudo code pour le filtre de réverbération:
 Créer une copie du signal original en le transformant en tableau numpy
 Séparer le signal entre le canal gauche et le canal droit (si stéréo) pour obtenir deux tableaux numpy 1D
 Pour chaque canal:
-        Initialiser un tableau numpy de zéros de taille (signal + le délai de réverbération)
-        Ajouter le signal original au début du tableau
-        Ajouter le signal retardé multiplié par l'atténuation au tableau à partir de l'index du délai
+    Initialiser un tableau numpy de zéros de taille (signal + le délai de réverbération)
+    Ajouter le signal original au début du tableau
+    Ajouter le signal retardé multiplié par l'atténuation au tableau à partir de l'index du délai
 Combiner les deux canaux en un seul tableau numpy 2D (si stéréo)
 Retourner le signal réverbéré sous forme de liste
 ```
