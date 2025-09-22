@@ -79,11 +79,13 @@ Vous devez réaliser une application graphique avec PySide6 qui permet de:
 
 - Une section pour les filtres à appliquer
     - Sur une ligne, un QCheckBox pour le filtre de réverbération
-      - Un QLAbel et un QSpinBox pour régler le délai de réverbération (minimum 0, maximum 1500, valeur par défaut 50)
+      - Un QLabel et un QSpinBox pour régler le délai de réverbération (minimum 0, maximum 1500, valeur par défaut 50)
       - Un QLabel et un QLineEdit pour régler l'attenuation de la réverbération (minimum 0.0, maximum 1.0, valeur par défaut 0.5)
+      - pour les aligner, vous pouvez utiliser un QHBoxLayout pour chaque ligne
     - Sur une ligne, un QCheckBox pour les filtre passe-bas et pass-haut
       - Un QComboBox pour choisir entre passe-bas et passe-haut
       - Un QLabel et un QLineEdit pour régler la fréquence de coupure
+      - pour les aligner, vous pouvez utiliser un QHBoxLayout pour chaque ligne
 
 - Un bouton pour appliquer les filtres
   - Lorsque cliqué, les filtres sélectionnés doivent être appliqués au signal audio
@@ -97,6 +99,7 @@ Vous devez réaliser une application graphique avec PySide6 qui permet de:
       - Doit utiliser l'icône ``stop.png``
       - Lorsque cliqué, la lecture du fichier audio doit s'arrêter
       - Une fois la lecture arrêtée, le bouton doit être désactivé et le bouton de lecture doit être activé
+    - Pour les aligner, vous pouvez utiliser un QHBoxLayout
 
 - Une barre de statut
   - Doit afficher une barre de progression pendant l'application des filtres
@@ -155,7 +158,7 @@ Retourner le signal filtré sous forme de liste
 ## Évaluation
 - Interface utilisateur (70%)
 - Fonctionnalité des filtres (30%)
-- Bonus (10%): Ajouter un spectrogramme du signal audio dans l'interface utilisateur
+- Bonus (5%): Ajouter un spectrogramme du signal audio dans l'interface utilisateur
   - Vous pouvez utiliser la bibliothèque `matplotlib` pour afficher le spectrogramme
 
 Des points seront retirés pour:
@@ -164,6 +167,8 @@ Des points seront retirés pour:
     - PEP-008 non respecté
     - Non-respect des conventions de nommage
 
+Les dispositions (layouts) ne sont pas proprement évaluées, mais une interface bien organisée et agréable à utiliser le sera.
+
 ### Bugs
-- Si vous êtes le premier à rapporter un bug, vous obtiendrez 5% de bonus sur la note finale (max 5%)
+- Si votre équipe est la première à rapporter un bug, vous obtiendrez 5% de bonus sur la note du travail (max 5%)
 
