@@ -84,7 +84,7 @@ Vous devez réaliser une application graphique avec PySide6 qui permet de:
       - pour les aligner, vous pouvez utiliser un QHBoxLayout pour chaque ligne
     - Sur une ligne, un QCheckBox pour les filtre passe-bas et pass-haut
       - Un QComboBox pour choisir entre passe-bas et passe-haut
-      - Un QLabel et un QLineEdit pour régler la fréquence de coupure
+      - Un QLabel et un QLineEdit pour régler la fréquence de coupure (en Hz, valeur par défaut 1000)
       - pour les aligner, vous pouvez utiliser un QHBoxLayout pour chaque ligne
 
 - Un bouton pour appliquer les filtres
