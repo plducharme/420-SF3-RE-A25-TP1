@@ -162,10 +162,10 @@ Retourner le signal filtré sous forme de liste
   - Vous pouvez utiliser la bibliothèque `matplotlib` pour afficher le spectrogramme
 
 Des points seront retirés pour:
-    - Code non commenté
-    - Non-respect des consignes
-    - PEP-008 non respecté
-    - Non-respect des conventions de nommage
+- Code non commenté
+- Non-respect des consignes
+- PEP-008 non respecté
+- Non-respect des conventions de nommage
 
 Les dispositions (layouts) ne sont pas proprement évaluées, mais une interface bien organisée et agréable à utiliser le sera.
 
