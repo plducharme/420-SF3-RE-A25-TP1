@@ -80,7 +80,8 @@ Vous devez réaliser une application graphique avec PySide6 qui permet de:
 - Une section pour les filtres à appliquer
     - Sur une ligne, un QCheckBox pour le filtre de réverbération
       - Un QLabel et un QSpinBox pour régler le délai de réverbération (minimum 0, maximum 1500, valeur par défaut 50)
-      - Un QLabel et un QLineEdit pour régler l'attenuation de la réverbération (minimum 0.0, maximum 1.0, valeur par défaut 0.5)
+      - Un QLabel et un QLineEdit pour régler l'atténuation de la réverbération (minimum 0.0, maximum 1.0, valeur par défaut 0.5)
+        - Il vous est permis d'utiliser un QSpinBox au lieu d'un QLineEdit pour l'atténuation.
       - pour les aligner, vous pouvez utiliser un QHBoxLayout pour chaque ligne
     - Sur une ligne, un QCheckBox pour les filtre passe-bas et pass-haut
       - Un QComboBox pour choisir entre passe-bas et passe-haut
@@ -89,6 +90,7 @@ Vous devez réaliser une application graphique avec PySide6 qui permet de:
 
 - Un bouton pour appliquer les filtres
   - Lorsque cliqué, les filtres sélectionnés doivent être appliqués au signal audio
+  - Voir la section ``Application de filtres``
 
 - Une section pour le contrôle de la lecture
     - Un bouton pour démarrer la lecture
@@ -153,6 +155,17 @@ Pour le canal gauche et le canal droit (si stéréo):
 Combiner les deux canaux en un seul tableau numpy 2D (si stéréo)
 Retourner le signal filtré sous forme de liste
 ```
+
+### Application de filtres
+Pour appliquer un filtre sur un signal, vous devrez d'abord constituer une liste de filtres à appliquer.  Pour ce faire,
+ vous devez connecter le bouton "Appliquer filtres" à une méthode de votre contrôleur. Cette méthode doit vérifier les
+filtres sélectionnés dans l'interface et les initialiser (appeler le constructeur du filtre). Les filtres possèdent deux
+attributs:
+- nom: Le nom du filtre, pas utilisé par l'interface en ce moment
+- paramètres: un dictionnaire pouvant contenir n'importe quelles paires de clé-valeur nécessaire au filtre (ex: fréquence de coupure)
+Une fois initialisé et ajouté à la liste, vous pourrez appeler la méthode fournie ``appliquer_filtres()``. Comme chaque 
+filtre hérite de AbstractFiltre, ils possèdent tous une méthode filtrer() qui contient la logique du filtre. La boucle va les
+appliquer le filtre en utilisant le résultat du filtre précédent (ou le signal source pour le premier).
 
 ## Évaluation
 - Interface utilisateur (70%)
