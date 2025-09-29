@@ -164,7 +164,7 @@ attributs:
 - nom: Le nom du filtre, pas utilisé par l'interface en ce moment
 - paramètres: un dictionnaire pouvant contenir n'importe quelles paires de clé-valeur nécessaire au filtre (ex: fréquence de coupure)
 Une fois initialisé et ajouté à la liste, vous pourrez appeler la méthode fournie ``appliquer_filtres()``. Comme chaque 
-filtre hérite de AbstractFiltre, ils possèdent tous une méthode filtrer() qui contient la logique du filtre. La boucle va les
+filtre héritent de AbstractFiltre, ils possèdent tous une méthode filtrer() qui contient la logique du filtre. La boucle va les
 appliquer le filtre en utilisant le résultat du filtre précédent (ou le signal source pour le premier).
 
 ## Fichiers sonores pour les tests
