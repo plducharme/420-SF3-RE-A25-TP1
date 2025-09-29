@@ -167,6 +167,16 @@ Une fois initialisé et ajouté à la liste, vous pourrez appeler la méthode fo
 filtre hérite de AbstractFiltre, ils possèdent tous une méthode filtrer() qui contient la logique du filtre. La boucle va les
 appliquer le filtre en utilisant le résultat du filtre précédent (ou le signal source pour le premier).
 
+## Fichiers sonores pour les tests
+Des fichiers sonores du domaine public vous sont fournis dans le répertoire audio.
+Vous pouvez créer vos propres fichiers WAV en utilisant ``vlc media player``:
+- Fichier -> Convertir/Enregistrer
+- Choisir le ou les fichiers à convertir avec ``ajouter`` (ex: fichiers en format mp3)
+- cliquer sur ``Convertir/Enregistrer``
+- Dans profil, choisir ``Audio - CD`` (c'est un format wav avec une fréquence d'échantillonnage de 44100Hz)
+- Choisir un nom pour le fichier de destination
+- Cliquer ``Démarrer``
+
 ## Évaluation
 - Interface utilisateur (70%)
 - Fonctionnalité des filtres (30%)
